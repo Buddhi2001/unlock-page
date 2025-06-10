@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Unlock Your Link</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body, html {
+      height: 100%;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      overflow: hidden;
+    }
+
+    body {
+      background: url('https://i.postimg.cc/MpZhPNcV/c8f7c6c7c750edea347ab181f9b3a8b4.jpg') no-repeat center center/cover;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: white;
+      padding: 20px;
+      position: relative;
+    }
+
+    h1 {
+      font-size: 28px;
+      text-shadow: 0 0 10px #000;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 16px;
+      margin-bottom: 30px;
+      text-shadow: 0 0 8px #000;
+    }
+
+    .btn {
+      background-color: transparent;
+      color: #0ff;
+      padding: 15px 35px;
+      font-size: 20px;
+      border: 2px solid #0ff;
+      border-radius: 10px;
+      cursor: pointer;
+      text-shadow: 0 0 5px #0ff;
+      box-shadow: 0 0 10px #0ff, 0 0 40px #0ff inset;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background-color: rgba(0, 255, 255, 0.1);
+      box-shadow: 0 0 20px #0ff, 0 0 60px #0ff inset;
+    }
+
+    .timer {
+      margin-top: 25px;
+      font-size: 18px;
+      text-shadow: 0 0 8px #000;
+    }
+
+    .privacy {
+      position: absolute;
+      bottom: 10px;
+      font-size: 12px;
+      color: #ddd;
+      text-align: center;
+      padding: 10px;
+      width: 100%;
+      text-shadow: 0 0 4px #000;
+    }
+
+    @media (min-width: 768px) {
+      h1 { font-size: 36px; }
+      p { font-size: 20px; }
+      .btn { font-size: 24px; }
+      .timer { font-size: 20px; }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🔓 Unlock Your Content</h1>
+  <p>Click below to begin unlocking your content.</p>
+
+  <button class="btn" onclick="startUnlock()" id="unlockBtn">Unlock Now</button>
+
+  <div class="timer" id="timerMessage"></div>
+
+  <!-- Privacy Notice -->
+  <div class="privacy">
+    🔒 <strong>Privacy Notice:</strong> We do not collect any personal data. External links may use cookies. By clicking "Unlock Now", you agree to visit third-party sites for unlocking purposes.
+    <br><br>
+    🔐 <strong>රහස්‍යතාවය පිළිබඳ දැන්වීම:</strong> අප විසින් ඔබගේ පුද්ගලික දත්ත එකතු නොකරයි. ඔබ ක්ලික් කරන ලින්ක් සම්බන්ධ වෙන්නේ තෙවැනි පාර්ශව වෙබ් අඩවි වලටය.
+  </div>
+
+  <script>
+    let countdown = 8;
+    let timerInterval;
+
+    function startUnlock() {
+      // Disable the button
+      document.getElementById("unlockBtn").disabled = true;
+      document.getElementById("unlockBtn").innerText = "Opening...";
+
+      // Step 1: Open Monetag link in new tab
+      window.open("https://otieu.com/4/9432612", "_blank");
+
+      // Step 2: Show countdown in current tab
+      document.getElementById("timerMessage").innerText = 
+        "Please wait... Redirecting in " + countdown + "s";
+
+      timerInterval = setInterval(function () {
+        countdown--;
+        if (countdown > 0) {
+          document.getElementById("timerMessage").innerText = 
+            "Please wait... Redirecting in " + countdown + "s";
+        } else {
+          clearInterval(timerInterval);
+          document.getElementById("timerMessage").innerText = "Redirecting now...";
+
+          // Step 3: Redirect to final content link
+          window.location.href = "https://jerkmate.com/?transaction_id=1020ce037f4229bb4d72a28f55d042&aff_id=65335&source=&url=12&xid=12&bo=2779%2C2778%2C2777%2C2776%2C2775";
+        }
+      }, 1000);
+    }
+  </script>
+
+</body>
+</html>
